@@ -1,0 +1,42 @@
+ion-datetime.calendar{
+    margin:20px;
+}
+
+ion-card {
+    width: 100%;
+    --background: #0f0f0f;
+    border-radius: 24px;
+  }
+  
+  ion-card-title {
+    --color: #ffffff;
+    text-shadow:
+      0 0 5px #02f5fd,
+      0 0 10px #02f5fd,
+      0 0 20px #02f5fd,
+      0 0 40px #02f5fd,
+      0 0 80px #02f5fd,
+      0 0 90px #02f5fd,
+      0 0 100px #02f5fd,
+      0 0 150px #02f5fd;
+  
+  }
+    
+  ion-card-subtitle {
+    --color: #979a99;
+  }
+  
+  ion-list{
+    background: #252424;
+  }
+  
+  ion-item#list-items {
+    --background: #252424;
+    padding: 0;
+  }
+  
+  ion-item#card-item{
+    --background: rgba(0,0,0,0.6) ;
+    border-radius: 24px;
+    height: 100%;
+  }

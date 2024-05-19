@@ -1,0 +1,194 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Calendar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-datetime class="calendar"></ion-datetime>
+    </ion-row>
+
+    <ion-row> 
+      <!-- <ion-list lines="none"  style="width : 100%">
+
+        <ion-item id="list-items">
+          <ion-card >
+            <ion-grid>
+              <ion-row class="ion-align-items-center" >
+                <ion-item-sliding>
+                  <ion-item id="card-item">
+                      <ion-col>
+                        <ion-card-header>
+                          <ion-card-title>To-do-list</ion-card-title>
+                          <ion-card-subtitle>
+                            18-03-2002
+                            19:00
+                            <ion-icon name="notifications-outline"></ion-icon>
+                            <ion-icon name="git-branch-outline"></ion-icon>
+                            <ion-icon name="document-text-outline"></ion-icon>
+                          </ion-card-subtitle>
+                        </ion-card-header>
+                      </ion-col>
+                      <ion-col size="auto">
+                        <ion-button fill="clear" >
+                          <ion-icon name="flag-outline"></ion-icon>
+                        </ion-button>
+                      </ion-col>
+                  </ion-item>
+                  <ion-item-options>
+                    <ion-item-option style="background: #3c84f0c4;">
+                      <ion-grid>
+                        <ion-row class="ion-justify-content-center">
+                          <ion-icon style="height: 28px; width: 28px; color: #fff" name="calendar-number-outline"></ion-icon>
+                        </ion-row>
+                        <ion-row>
+                          <ion-card-header style="color: #fff; font-size: 10px">Date</ion-card-header>
+                        </ion-row>
+                      </ion-grid>      
+                    </ion-item-option>
+                    <ion-item-option style="background: #f14848e7; border-top-right-radius:24px;border-bottom-right-radius:24px">
+                      <ion-grid>
+                        <ion-row class="ion-justify-content-center">
+                          <ion-icon style="height: 28px; width: 28px; color: #fff" name="trash-outline"></ion-icon>
+                        </ion-row>
+                        <ion-row>
+                          <ion-card-header style="color: #fff; font-size: 10px">Delete</ion-card-header>
+                        </ion-row>
+                      </ion-grid>      
+                    </ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+            </ion-row>
+            </ion-grid>
+          </ion-card>
+        </ion-item>
+    
+        <ion-item id="list-items">
+          <ion-card >
+            <ion-grid>
+              <ion-row class="ion-align-items-center" >
+                <ion-item-sliding>
+                  <ion-item id="card-item">
+                      <ion-col>
+                        <ion-card-header>
+                          <ion-card-title>To-do-list</ion-card-title>
+                          <ion-card-subtitle>
+                            18-03-2002
+                            19:00
+                            <ion-icon name="notifications-outline"></ion-icon>
+                            <ion-icon name="git-branch-outline"></ion-icon>
+                            <ion-icon name="document-text-outline"></ion-icon>
+                          </ion-card-subtitle>
+                        </ion-card-header>
+                      </ion-col>
+                      <ion-col size="auto">
+                        <ion-button fill="clear" >
+                          <ion-icon name="flag-outline"></ion-icon>
+                        </ion-button>
+                      </ion-col>
+                  </ion-item>
+                  <ion-item-options>
+                    <ion-item-option style="background: #3c84f0c4;">
+                      <ion-grid>
+                        <ion-row class="ion-justify-content-center">
+                          <ion-icon style="height: 28px; width: 28px; color: #fff" name="calendar-number-outline"></ion-icon>
+                        </ion-row>
+                        <ion-row>
+                          <ion-card-header style="color: #fff; font-size: 10px">Date</ion-card-header>
+                        </ion-row>
+                      </ion-grid>      
+                    </ion-item-option>
+                    <ion-item-option style="background: #f14848e7; border-top-right-radius:24px;border-bottom-right-radius:24px">
+                      <ion-grid>
+                        <ion-row class="ion-justify-content-center">
+                          <ion-icon style="height: 28px; width: 28px; color: #fff" name="trash-outline"></ion-icon>
+                        </ion-row>
+                        <ion-row>
+                          <ion-card-header style="color: #fff; font-size: 10px">Delete</ion-card-header>
+                        </ion-row>
+                      </ion-grid>      
+                    </ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+            </ion-row>
+            </ion-grid>
+          </ion-card>
+        </ion-item>
+
+        <ion-item id="list-items">
+          <ion-card >
+            <ion-grid>
+              <ion-row class="ion-align-items-center" >
+                <ion-item-sliding>
+                  <ion-item id="card-item">
+                      <ion-col>
+                        <ion-card-header>
+                          <ion-card-title>To-do-list</ion-card-title>
+                          <ion-card-subtitle>
+                            18-03-2002
+                            19:00
+                            <ion-icon name="notifications-outline"></ion-icon>
+                            <ion-icon name="git-branch-outline"></ion-icon>
+                            <ion-icon name="document-text-outline"></ion-icon>
+                          </ion-card-subtitle>
+                        </ion-card-header>
+                      </ion-col>
+                      <ion-col size="auto">
+                        <ion-button fill="clear" >
+                          <ion-icon name="flag-outline"></ion-icon>
+                        </ion-button>
+                      </ion-col>
+                  </ion-item>
+                  <ion-item-options>
+                    <ion-item-option style="background: #3c84f0c4;">
+                      <ion-grid>
+                        <ion-row class="ion-justify-content-center">
+                          <ion-icon style="height: 28px; width: 28px; color: #fff" name="calendar-number-outline"></ion-icon>
+                        </ion-row>
+                        <ion-row>
+                          <ion-card-header style="color: #fff; font-size: 10px">Date</ion-card-header>
+                        </ion-row>
+                      </ion-grid>      
+                    </ion-item-option>
+                    <ion-item-option style="background: #f14848e7; border-top-right-radius:24px;border-bottom-right-radius:24px">
+                      <ion-grid>
+                        <ion-row class="ion-justify-content-center">
+                          <ion-icon style="height: 28px; width: 28px; color: #fff" name="trash-outline"></ion-icon>
+                        </ion-row>
+                        <ion-row>
+                          <ion-card-header style="color: #fff; font-size: 10px">Delete</ion-card-header>
+                        </ion-row>
+                      </ion-grid>      
+                    </ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+            </ion-row>
+            </ion-grid>
+          </ion-card>
+        </ion-item>
+
+      </ion-list> -->
+
+      <ion-title id="list-items">
+        <p align="center">No tasks for the day</p>
+        <p align="center">Click + to create your tasks</p>
+      </ion-title>
+    </ion-row>
+
+  </ion-grid>
+
+ 
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" style="padding: 15px">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+</ion-content>
+

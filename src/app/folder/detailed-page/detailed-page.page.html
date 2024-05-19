@@ -1,0 +1,112 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="primary">
+      <ion-button id="click-trigger"><ion-icon name="ellipsis-vertical-outline"></ion-icon></ion-button>
+      <ion-popover trigger="click-trigger" triggerAction="click">
+        <ng-template>
+          <ion-grid style="width:100%">
+            <ion-row style="padding: 10px;">Delete</ion-row>
+            <ion-row style="padding: 10px;">Mask as done</ion-row>
+            <ion-row style="padding: 10px;">Favorite</ion-row>
+            <ion-row style="padding: 10px;">Edit</ion-row>
+          </ion-grid>
+        </ng-template>
+      </ion-popover>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ id }}</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <ion-title>To-do-list</ion-title>
+
+  <ion-grid>
+    <ion-row style="padding: 20px">
+      <ion-input
+        placeholder="To-do-list"
+        text="To-do-list"
+        class="header">
+      </ion-input>
+    </ion-row>
+
+    <ion-row  style="padding: 20px"  id="list-sub-tasks">
+      <ion-list *ngFor="let subtask of subtasks" lines="full" style="width: 100%;" id="list-sub-tasks">
+        <ion-item  class="sub-tasks" id="{{this.subtask}}" style="width: 100%">
+          <ion-checkbox slot="start" class="round"></ion-checkbox>
+          <ion-input placeholder="Input the sub-task"></ion-input>
+          <ion-button fill="clear" (click)="removeSubtask(subtask.id)"><ion-icon name="close-outline"></ion-icon></ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+    
+    <ion-row style="padding: 20px; border-bottom: 1px solid rgb(88, 87, 87)">
+      <div style="width: 100%">
+        <ion-button fill="clear" style="width: 100%" (click)="addSubTask()">
+          <ion-icon name="add" expand="block"></ion-icon>  Add Sub-task
+        </ion-button>
+      </div>
+    </ion-row>
+
+    <ion-row style="padding: 20px; border-bottom: 1px solid rgb(88, 87, 87)" (click)="showDatePicker = !showDatePicker" id="open-date-picker-dialog">
+        <ion-col size="auto"><ion-icon name="calendar-clear-outline"></ion-icon></ion-col>
+        <ion-col>Due Date</ion-col>
+        <ion-col size="auto"><code>2023/10/08</code></ion-col>
+    </ion-row>
+    
+    <ion-row style="padding: 20px; border-bottom: 1px solid rgb(88, 87, 87)" id="open-time-picker-dialog">
+      <ion-col size="auto"><ion-icon name="notifications-outline"></ion-icon></ion-col>
+      <ion-col>Time & Reminder</ion-col>
+      <ion-col size="auto"><code>22:25</code></ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-modal
+    class ="wrapper" 
+    id="datepicker-modal" 
+    #modal trigger="open-date-picker-dialog"
+    [cssClass]="'bottom-end'">
+    <ng-template>
+      <ion-datetime 
+          #datetime
+          size="cover"
+          showDefaultButtons="true"
+          showDefaultTimeLabel="false"
+          (ionCancel)="showDatePicker=false;"
+          presentation="date"
+          [value]="dateValue"
+          (ionChange)="dateChanged(datetime.value)">
+        </ion-datetime>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal
+    class ="wrapper" 
+    id="timepicker-modal" 
+    #modal trigger="open-time-picker-dialog"
+    [cssClass]="'bottom-end'">
+    <ng-template>
+      <ion-datetime 
+        #time
+        size="cover"
+        showDefaultButtons="true"
+        (ionCancel)="dismissTimePicker()"
+        presentation="time"
+        [cancelText]="'Cancel'"
+        (ionChange)="timeChanged(time.value)">
+      </ion-datetime>
+    </ng-template>
+  </ion-modal>
+
+
+
+</ion-content>
